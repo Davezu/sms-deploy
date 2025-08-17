@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TextBee SMS Sender</title>
+    <title>PH SMS</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #4b55a2 100%);
+            background: rgb(31, 83, 129);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -78,7 +78,7 @@
         .send-btn {
             width: 100%;
             padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #6079e9 100%);
+            background:rgb(6, 78, 6);
             color: white;
             border: none;
             border-radius: 10px;
@@ -146,14 +146,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>Philippine SMS Sender</h1>
+        <h1>Free text for PH numbers</h1>
 
         <form id="smsForm">
             <div class="form-group">
                 <label for="phoneNumber">Philippine Mobile Number</label>
-                <input type="tel" id="phoneNumber" placeholder="Ex: 09171234567" required maxlength="11">
+                <input type="tel" id="phoneNumber" placeholder="Ex: 09123456789" required maxlength="11">
                 <small style="color: #666; font-size: 12px; margin-top: 5px; display: block;">
-                    Enter your mobile: 09171234567, 09181234567, etc.
+                    Enter your mobile: 09123456789, 09987654321, etc.
                 </small>
                 <div id="phonePreview" style="font-size: 12px; margin-top: 5px; color: #4CAF50; display: none;">
                     Will send to: <span id="formattedNumber"></span>
@@ -179,10 +179,10 @@
            Follow me on Github <a href="https://github.com/Davezu" target="_blank" style="color: #667eea;">Davezu</a> For more projects.
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-        const API_KEY = '87db6d1b-a9dd-4b71-aec5-2816d771e5ba';
-        const DEVICE_ID = '689b062c16aabe68071a32f8';
+        const API_KEY = 'b7746b27-f405-404e-b958-0221d5ed48a7';
+        const DEVICE_ID = '689f381ff6706f717bb34d20';
         const API_BASE_URL = 'https://api.textbee.dev/api/v1/gateway';
 
 
