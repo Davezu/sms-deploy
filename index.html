@@ -181,13 +181,10 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-        const API_KEY = 'b7746b27-f405-404e-b958-0221d5ed48a7';
+        const KEY = 'b7746b27-f405-404e-b958-0221d5ed48a7';
         const DEVICE_ID = '689f381ff6706f717bb34d20';
-        const API_BASE_URL = 'https://api.textbee.dev/api/v1/gateway';
+        const API = 'https://api.textbee.dev/api/v1/gateway';
 
-
-
-        // Character counter
         const messageInput = document.getElementById('message');
         const charCount = document.getElementById('charCount');
 
@@ -234,14 +231,14 @@
                     message: message
                 };
 
-                console.log('Sending request to:', `${API_BASE_URL}/devices/${DEVICE_ID}/send-sms`);
+                console.log('Sending request to:', `${API}/devices/${DEVICE_ID}/send-sms`);
                 console.log('Request body:', requestBody);
 
-                const apiResponse = await fetch(`${API_BASE_URL}/devices/${DEVICE_ID}/send-sms`, {
+                const apiResponse = await fetch(`${API}/devices/${DEVICE_ID}/send-sms`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'x-api-key': API_KEY
+                        'x-api-key': KEY
                     },
                     body: JSON.stringify(requestBody)
                 });
